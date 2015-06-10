@@ -1,0 +1,201 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Raleway");
+@import url("http://fonts.googleapis.com/css?family=NewsCycle");
+@font-face {
+  font-family: Wayback;
+  src: url("Wayback.otf");
+}
+@font-face {
+  font-family: Tswift;
+  src: url("tSwift_lines.ttf");
+}
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Store the main color and
+ * background color as variables
+ */
+body {
+/* transparent background for info section */
+  filter: alpha opacity 90%;
+  background-color: #fff;
+  color: #444;
+  height: 100%;
+  padding-top: 200px;
+}
+header {
+  height: 250px;
+/* transparent background for info section */
+  filter: alpha opacity 90%;
+  color: #000;
+  text-shadow: #000 0.02em 0.02em 0.02em;
+  font-size: 70px;
+  text-align: center;
+  position: scroll;
+}
+.title {
+  height: 150px;
+  font-family: Wayback;
+}
+h1 {
+  padding-left: 100px;
+  vertical-align: center;
+}
+info {
+  color: #000;
+/* transparent background for info section */
+  filter: alpha opacity 90%;
+}
+.container {
+  font-family: Tswift;
+  margin-top: 30px;
+  width: 40%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.main-content {
+  float: left;
+  margin-top: 20px;
+  width: 550px;
+}
+.main-content p {
+  margin-bottom: 20px;
+}
+.sidebar {
+  margin-top: 30px;
+  float: right;
+  width: 200px;
+  height: 300px;
+  test-color: #000;
+}
+.sidebar .widget {
+/*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+}
+.sidebar .widget h1 {
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  -webkit-border-radius: 2px 2px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+.sidebar .widget p {
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+footer {
+  font-family: Wayback;
+  width: 1000px;
+  margin: 50px auto;
+  padding-top: 5px;
+  font-size: 15px;
+}

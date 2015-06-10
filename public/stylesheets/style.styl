@@ -1,0 +1,116 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Raleway')
+@import url(http://fonts.googleapis.com/css?family=News+Cycle);
+@font-face {
+  font-family: Wayback
+  src: url(Wayback.otf)
+}
+@font-face {
+  font-family: Tswift
+  src: url(tSwift_lines.ttf)
+}
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #505050
+background-color = #fff
+
+body
+  /* transparent background for info section */
+  filter: alpha opacity 90%   
+  background-color background-color
+  color #444
+  height 100%
+  padding-top 200px
+
+header
+  height 250px
+  /* transparent background for info section */
+  filter: alpha opacity 90%    
+  color: black
+  text-shadow: black 0.02em 0.02em 0.02em
+  font-size 70px
+  text-align center
+  position scroll
+
+.title
+  height:150px
+  font-family: Wayback
+
+h1 
+  padding-left 100px
+  vertical-align center
+
+info
+  color black
+  /* transparent background for info section */
+  filter: alpha opacity 90%    
+
+.container
+  font-family: Tswift
+  margin-top 30px
+  width 40%
+  margin 50px auto
+  overflow hidden
+
+.main-content
+  float left
+  margin-top 20px
+  width 550px
+
+  p
+    margin-bottom 20px
+
+.sidebar
+  margin-top 30px
+  float right
+  width 200px
+  height 300px
+  test-color black
+
+  .widget
+
+    /*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+    border-radius 3px
+    border 1px solid #ccc
+    margin-left 20px
+    background-color background-color
+    box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+
+    h1
+      margin 13px 10px 4px
+      padding-bottom 10px
+      border-bottom 1px dotted #ddd
+      border-radius 2px 2px 0px 0px
+      margin-bottom 10px
+
+    p
+      font-size 13px
+      padding 0px 10px
+      margin-bottom 10px
+
+
+footer
+  font-family Wayback
+  width 1000px
+  margin 50px auto
+  padding-top 5px
+  font-size 15px
