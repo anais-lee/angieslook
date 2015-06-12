@@ -1,21 +1,36 @@
+// animations to try:
+// http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/
+  // image rotating (3d presentation for front and back of images)
+  // animations
+  // 
+// https://clippingmagic.com/ for image background clipping 
+
 /*
  * Import nib
  */
 @import 'nib'
 
-/*
- * Grab a custom font from Google
- */
+/***********************************************************************************
+*************** FONTS **************************************************************
+************************************************************************************/
+
 @import url('http://fonts.googleapis.com/css?family=Raleway')
-@import url(http://fonts.googleapis.com/css?family=News+Cycle);
+@import url(http://fonts.googleapis.com/css?family=News+Cycle)
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
 @font-face {
   font-family: Wayback
-  src: url(Wayback.otf)
+  src: url(Wayback.ttf) 
 }
+
 @font-face {
-  font-family: Tswift
-  src: url(tSwift_lines.ttf)
+  font-family: JungleCat
+  src: url(JungleCat.ttf)
 }
+
+/***********************************************************************************
+*********** GLOBAL PROPERTIES ****************************************************
+************************************************************************************/
 
 /*
  * Nib provides a CSS reset
@@ -29,6 +44,10 @@ global-reset()
 main-color = #505050
 background-color = #fff
 
+
+/***********************************************************************************
+*********** CONTENT ***************************************************************
+************************************************************************************/
 body
   /* transparent background for info section */
   filter: alpha opacity 90%   
@@ -38,17 +57,21 @@ body
   padding-top 200px
 
 header
-  height 250px
+  height 700px
   /* transparent background for info section */
   filter: alpha opacity 90%    
-  color: black
-  text-shadow: black 0.02em 0.02em 0.02em
-  font-size 70px
   text-align center
-  position scroll
 
-.title
-  height:150px
+.sitename
+  height:200
+  font-size 80px
+  color #9999CC
+  font-family: JungleCat
+
+.myname
+  height 400px
+  font-size 50px
+  color black
   font-family: Wayback
 
 h1 
@@ -56,16 +79,24 @@ h1
   vertical-align center
 
 info
+  width 100%
   color black
   /* transparent background for info section */
-  filter: alpha opacity 90%    
+  filter: alpha opacity 90%   
 
 .container
-  font-family: Tswift
+  font-family: Quicksand
   margin-top 30px
-  width 40%
+  width 50%
   margin 50px auto
-  overflow hidden
+  white-space: pre;           /* CSS 2.0 */
+  white-space: pre-wrap;      /* CSS 2.1 */
+  white-space: pre-line;      /* CSS 3.0 */      
+  white-space: -pre-wrap;     /* Opera 4-6 */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap;  /* HP Printers */
+  word-wrap: break-word;      /* IE 5+ */
 
 .main-content
   float left
@@ -74,43 +105,108 @@ info
 
   p
     margin-bottom 20px
+    font-family: Quicksand
+    font-size 18px
 
-.sidebar
-  margin-top 30px
-  float right
-  width 200px
+  p.hello
+    font-family JungleCat
+    font-size 20px
+
+
+
+/***********************************************************************************
+*************** SIDEBAR STYLE *******************************************************
+************************************************************************************/
+
+.navigator
+  margin 50px auto
+  width 50%
   height 300px
   test-color black
+  overflow hidden
+  display table-row
 
-  .widget
+  .dynamicon
+    padding-left 100px
+    display table-cell
 
+  .sidebar
+
+    text-align center
+    width 200px
+    height 220px
+    float right
+    display table-cell
     /*
      * Note the lack of vendor
      * prefixes here. Nib will
      * add them for us
      */
-    border-radius 3px
-    border 1px solid #ccc
+    border-radius 4px
+    border 5px outset #ccc
+    font-family Wayback
+    font-size 20px
     margin-left 20px
-    background-color background-color
+    background-color backgroundE-color
     box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
 
-    h1
-      margin 13px 10px 4px
-      padding-bottom 10px
-      border-bottom 1px dotted #ddd
-      border-radius 2px 2px 0px 0px
+    p1
+      font-family JungleCat
+      font-size 15px
+      margin-top 10px
       margin-bottom 10px
 
-    p
-      font-size 13px
-      padding 0px 10px
-      margin-bottom 10px
+    p 
+      font-family Quicksand
+      font-size 10px
+
+.menubutton
+  float right
+  margin-right 100px
+  height 30px
+  width 30px
+  background-color #000000 
+  position scroll
 
 
+/***********************************************************************************
+***************** FOOTER **********************************************************
+************************************************************************************/
 footer
   font-family Wayback
-  width 1000px
   margin 50px auto
   padding-top 5px
   font-size 15px
+
+.test 
+  font-family Quicksand
+  width 200px
+  margin 50 px auto
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************
+************** ALTERNATE MEDIA  *******************************************************
+************************************************************************************/
+  /* This simple media query makes the column layout
+   linear on smaller screens */
+
+@media (max-width:900px){
+
+  body{
+    width:100%;
+  }
+
+  header, info, footer{
+    width:auto;
+    margin-bottom:20px;
+    float:none;
+  }
+}

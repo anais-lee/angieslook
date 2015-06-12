@@ -1,19 +1,23 @@
 /*
  * Import nib
  */
-/*
- * Grab a custom font from Google
- */
+/***********************************************************************************
+*************** FONTS **************************************************************
+************************************************************************************/
 @import url("http://fonts.googleapis.com/css?family=Raleway");
 @import url("http://fonts.googleapis.com/css?family=NewsCycle");
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
 @font-face {
   font-family: Wayback;
-  src: url("Wayback.otf");
+  src: url("Wayback.ttf");
 }
 @font-face {
-  font-family: Tswift;
-  src: url("tSwift_lines.ttf");
+  font-family: JungleCat;
+  src: url("JungleCat.ttf");
 }
+/***********************************************************************************
+*********** GLOBAL PROPERTIES ****************************************************
+************************************************************************************/
 /*
  * Nib provides a CSS reset
  */
@@ -112,6 +116,9 @@ a img {
  * Store the main color and
  * background color as variables
  */
+/***********************************************************************************
+*********** CONTENT ***************************************************************
+************************************************************************************/
 body {
 /* transparent background for info section */
   filter: alpha opacity 90%;
@@ -121,17 +128,21 @@ body {
   padding-top: 200px;
 }
 header {
-  height: 250px;
+  height: 700px;
 /* transparent background for info section */
   filter: alpha opacity 90%;
-  color: #000;
-  text-shadow: #000 0.02em 0.02em 0.02em;
-  font-size: 70px;
   text-align: center;
-  position: scroll;
 }
-.title {
-  height: 150px;
+.sitename {
+  height: 200;
+  font-size: 80px;
+  color: #99c;
+  font-family: JungleCat;
+}
+.myname {
+  height: 400px;
+  font-size: 50px;
+  color: #000;
   font-family: Wayback;
 }
 h1 {
@@ -139,16 +150,24 @@ h1 {
   vertical-align: center;
 }
 info {
+  width: 100%;
   color: #000;
 /* transparent background for info section */
   filter: alpha opacity 90%;
 }
 .container {
-  font-family: Tswift;
+  font-family: Quicksand;
   margin-top: 30px;
-  width: 40%;
+  width: 50%;
   margin: 50px auto;
-  overflow: hidden;
+  white-space: pre; /* CSS 2.0 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3.0 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap; /* HP Printers */
+  word-wrap: break-word; /* IE 5+ */
 }
 .main-content {
   float: left;
@@ -157,45 +176,95 @@ info {
 }
 .main-content p {
   margin-bottom: 20px;
+  font-family: Quicksand;
+  font-size: 18px;
 }
-.sidebar {
-  margin-top: 30px;
-  float: right;
-  width: 200px;
+.main-content p.hello {
+  font-family: JungleCat;
+  font-size: 20px;
+}
+/***********************************************************************************
+*************** SIDEBAR STYLE *******************************************************
+************************************************************************************/
+.navigator {
+  margin: 50px auto;
+  width: 50%;
   height: 300px;
   test-color: #000;
+  overflow: hidden;
+  display: table-row;
 }
-.sidebar .widget {
+.navigator .dynamicon {
+  padding-left: 100px;
+  display: table-cell;
+}
+.navigator .sidebar {
+  text-align: center;
+  width: 200px;
+  height: 220px;
+  float: right;
+  display: table-cell;
 /*
      * Note the lack of vendor
      * prefixes here. Nib will
      * add them for us
      */
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 5px outset #ccc;
+  font-family: Wayback;
+  font-size: 20px;
   margin-left: 20px;
-  background-color: #fff;
+  background-color: backgroundE-color;
   -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
   box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
 }
-.sidebar .widget h1 {
-  margin: 13px 10px 4px;
-  padding-bottom: 10px;
-  border-bottom: 1px dotted #ddd;
-  -webkit-border-radius: 2px 2px 0px 0px;
-  border-radius: 2px 2px 0px 0px;
+.navigator .sidebar p1 {
+  font-family: JungleCat;
+  font-size: 15px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-.sidebar .widget p {
-  font-size: 13px;
-  padding: 0px 10px;
-  margin-bottom: 10px;
+.navigator .sidebar p {
+  font-family: Quicksand;
+  font-size: 10px;
 }
+.menubutton {
+  float: right;
+  margin-right: 100px;
+  height: 30px;
+  width: 30px;
+  background-color: #000;
+  position: scroll;
+}
+/***********************************************************************************
+***************** FOOTER **********************************************************
+************************************************************************************/
 footer {
   font-family: Wayback;
-  width: 1000px;
   margin: 50px auto;
   padding-top: 5px;
   font-size: 15px;
+}
+.test {
+  font-family: Quicksand;
+  width: 200px;
+  margin: 50 px auto;
+}
+/***********************************************************************************
+************** ALTERNATE MEDIA  *******************************************************
+************************************************************************************/
+/* This simple media query makes the column layout
+   linear on smaller screens */
+@media (max-width: 900px) {
+  body {
+    width: 100%;
+  }
+  header,
+  info,
+  footer {
+    width: auto;
+    margin-bottom: 20px;
+    float: none;
+  }
 }

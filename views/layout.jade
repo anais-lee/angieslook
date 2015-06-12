@@ -1,21 +1,49 @@
 doctype
 html
   head
-    title #{title} - Angela Lee
+    title #{title} - anais angela lee
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/animate.css')
+    link(rel='stylesheet', href='/stylesheets/wow.js')
+    script(src='stylesheets/wow.js')
+    script
+      new WOW().init()
+    script
+
   body
+
     header
-      div.title.animated.bounceInUp
-        | anais ANGELA lee
+      div.sitename.animated.swing
+        block namesite
+      div.myname.animated.bounceInUp
+        block author
 
     info
       .container
         .logo
-          block logo
+          block logo 
         .main-content
           block content
+
+      .navigator
+        .dynamicon
+          block leaficon
         .sidebar
           block sidebar
+      .menubutton
+        | menu
+        script 
+        var latlng = new google.maps.LatLng(#{latitude}, #{longitude});
+        var myOptions 
+          zoom: 15
+          center: latlng
+          disableDefaultUI: true
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        
+
     footer
-      | anais AngelA lee designs 2015
+      div.wow.bounceInDown
+        | anais angela lee designs 2015
+
+      .test 
+        block test
