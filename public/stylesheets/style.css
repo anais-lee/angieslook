@@ -122,25 +122,25 @@ a img {
 body {
 /* transparent background for info section */
   filter: alpha opacity 90%;
-  background-color: #fff;
+  background-image: url("../images/kindajean.png");
   color: #444;
   height: 100%;
   padding-top: 200px;
 }
 header {
-  height: 700px;
+  height: 400px;
 /* transparent background for info section */
   filter: alpha opacity 90%;
   text-align: center;
 }
 .sitename {
-  height: 200;
+  height: 100px;
   font-size: 80px;
   color: #99c;
   font-family: JungleCat;
 }
 .myname {
-  height: 400px;
+  height: 100px;
   font-size: 50px;
   color: #000;
   font-family: Wayback;
@@ -157,7 +157,6 @@ info {
 }
 .container {
   font-family: Quicksand;
-  margin-top: 30px;
   width: 50%;
   margin: 50px auto;
   white-space: pre; /* CSS 2.0 */
@@ -171,7 +170,6 @@ info {
 }
 .main-content {
   float: left;
-  margin-top: 20px;
   width: 550px;
 }
 .main-content p {
@@ -241,15 +239,21 @@ info {
 ***************** FOOTER **********************************************************
 ************************************************************************************/
 footer {
-  font-family: Wayback;
   margin: 50px auto;
+  text-align: center;
+}
+.designer {
+  float: left;
+  font-family: Wayback;
   padding-top: 5px;
   font-size: 15px;
 }
 .test {
+  float: right;
   font-family: Quicksand;
   width: 200px;
   margin: 50 px auto;
+  clear: both;
 }
 /***********************************************************************************
 ************** ALTERNATE MEDIA  *******************************************************

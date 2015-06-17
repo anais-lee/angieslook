@@ -6,7 +6,6 @@ html
     link(rel='stylesheet', href='/stylesheets/animate.css')
     link(rel='stylesheet', href='/stylesheets/wow.js')
     script(src='stylesheets/wow.js')
-    script
       new WOW().init()
     script
 
@@ -30,19 +29,13 @@ html
           block leaficon
         .sidebar
           block sidebar
-      .menubutton
-        | menu
-        script 
-        var latlng = new google.maps.LatLng(#{latitude}, #{longitude});
-        var myOptions 
-          zoom: 15
-          center: latlng
-          disableDefaultUI: true
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+      div.wow
+        .menubutton
+         | menu
         
 
     footer
-      div.wow.bounceInDown
+      .designer
         | anais angela lee designs 2015
 
       .test 
